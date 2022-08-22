@@ -57,7 +57,8 @@ public class Board {
         boolean winsWithTopRow = topLeft == topMiddle && topMiddle == topRight && topRight == 'O';
         boolean winsWithMiddleRow = middleLeft == middleMiddle && middleMiddle == middleRight && middleRight == 'O';
         boolean winsWithBottomRow = bottomLeft == bottomMiddle && bottomMiddle == bottomRight && bottomRight == 'O';
-        return null;
+
+        return winsWithLeftColumn || winsWithMiddleColumn || winsWithRightColumn || winsWithLeftDiagonal || winsWithRightDiagonal || winsWithTopRow || winsWithMiddleRow || winsWithBottomRow;
     }
 
     public Boolean isTie() {
