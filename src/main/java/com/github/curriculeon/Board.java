@@ -5,6 +5,7 @@ package com.github.curriculeon;
  */
 public class Board {
     private final Character[][] matrix;
+
     public Board(Character[][] matrix) {
         this.matrix = matrix;
 
@@ -24,19 +25,14 @@ public class Board {
 
         // topLeft == middleLeft && middleLeft ==  bottomLeft && bottomLeft == x
         // line 25 checks to see if leftcolumn has the same value of x
-        boolean winsWithLeftColumn = topLeft == middleLeft && middleLeft ==  bottomLeft && bottomLeft == 'x';
-        boolean winsWithMiddleColumn = topMiddle == middleMiddle && middleMiddle ==  bottomMiddle && bottomMiddle == 'x';
-        boolean winsWithRightColumn = topRight == middleRight && middleRight ==  bottomRight && bottomRight == 'x';
+        boolean winsWithLeftColumn = topLeft == middleLeft && middleLeft == bottomLeft && bottomLeft == 'x';
+        boolean winsWithMiddleColumn = topMiddle == middleMiddle && middleMiddle == bottomMiddle && bottomMiddle == 'x';
+        boolean winsWithRightColumn = topRight == middleRight && middleRight == bottomRight && bottomRight == 'x';
         boolean winsWithLeftDiagonal = topLeft == middleMiddle && middleMiddle == bottomRight && bottomRight == 'x';
         boolean winsWithRightDiagonal = topRight == middleMiddle && middleMiddle == bottomLeft && bottomLeft == 'x';
         boolean winsWithTopRow = topLeft == topMiddle && topMiddle == topRight && topRight == 'x';
         boolean winsWithMiddleRow = middleLeft == middleMiddle && middleMiddle == middleRight && middleRight == 'x';
         boolean winsWithBottomRow = bottomLeft == bottomMiddle && bottomMiddle == bottomRight && bottomRight == 'x';
-
-
-
-
-
 
 
         return winsWithLeftColumn || winsWithMiddleColumn || winsWithRightColumn || winsWithLeftDiagonal || winsWithRightDiagonal || winsWithTopRow || winsWithMiddleRow || winsWithBottomRow;
