@@ -35,11 +35,11 @@ public class Board {
 
 
 
-        
 
 
 
-        return null;
+
+        return winsWithLeftColumn || winsWithMiddleColumn || winsWithRightColumn || winsWithLeftDiagonal || winsWithRightDiagonal || winsWithTopRow || winsWithMiddleRow || winsWithBottomRow;
     }
 
     public Boolean isInFavorOfO() {
