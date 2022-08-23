@@ -77,7 +77,7 @@ public class Board {
         }
 
 
-        return null;
+        return "";
     }
 
 }
